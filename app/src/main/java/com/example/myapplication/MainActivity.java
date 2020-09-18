@@ -29,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setpview5 = (HorizontalStepView) this.findViewById(R.id.step_view);
         stepsBeanList = new ArrayList<>();
-        StepBean stepBean0 = new StepBean("接单",-1);
-        StepBean stepBean1 = new StepBean("打包",-1);
-        StepBean stepBean2 = new StepBean("出发",-1);
-        StepBean stepBean3 = new StepBean("送单",-1);
-        StepBean stepBean4 = new StepBean("完成",-1);
+        StepBean stepBean0 = new StepBean("cooking",-1);
+        StepBean stepBean1 = new StepBean("picked",-1);
+        StepBean stepBean2 = new StepBean("on way",-1);
+        StepBean stepBean3 = new StepBean("delivered",-1);
+        StepBean stepBean4 = new StepBean("done",-1);
         stepsBeanList.add(stepBean0);
         stepsBeanList.add(stepBean1);
         stepsBeanList.add(stepBean2);
@@ -43,13 +43,13 @@ public class MainActivity extends AppCompatActivity {
 
         setpview5
                 .setStepViewTexts(stepsBeanList)//总步骤
-                .setTextSize(12)//set textSize
-                .setStepsViewIndicatorCompletedLineColor(ContextCompat.getColor(this, android.R.color.holo_red_dark))//设置StepsViewIndicator完成线的颜色
-                .setStepsViewIndicatorUnCompletedLineColor(ContextCompat.getColor(this, android.R.color.darker_gray))//设置StepsViewIndicator未完成线的颜色
-                .setStepViewComplectedTextColor(ContextCompat.getColor(this, android.R.color.black))//设置StepsView text完成线的颜色
-                .setStepViewUnComplectedTextColor(ContextCompat.getColor(this, android.R.color.darker_gray))//设置StepsView text未完成线的颜色
+                .setTextSize(8)//set textSize
+                .setStepsViewIndicatorCompletedLineColor(ContextCompat.getColor(this, android.R.color.holo_red_dark))
+                .setStepsViewIndicatorUnCompletedLineColor(ContextCompat.getColor(this, android.R.color.darker_gray))
+                .setStepViewComplectedTextColor(ContextCompat.getColor(this, android.R.color.black))
+                .setStepViewUnComplectedTextColor(ContextCompat.getColor(this, android.R.color.darker_gray))
                 .setStepsViewIndicatorCompleteIcon(ContextCompat.getDrawable(this, R.drawable.completed_icon))
-                .setStepsViewIndicatorDefaultIcon(ContextCompat.getDrawable(this, R.drawable.default_icon))//设置StepsViewIndicator DefaultIcon
+                .setStepsViewIndicatorDefaultIcon(ContextCompat.getDrawable(this, R.drawable.default_icon))
                 .setStepsViewIndicatorAttentionIcon(ContextCompat.getDrawable(this, R.drawable.attention));
 
         myTimer = new Timer();
